@@ -8,20 +8,40 @@ const skills = {
 };
 
 const experience = [
-  { period: "2021 — PRESENT", role: "Senior WordPress Developer", company: "Volans Infomatics Pvt. Ltd., Noida", text: "Developing responsive web experiences with HTML, CSS and JavaScript, implementing interfaces in WordPress, supporting the design team, communicating with clients, and managing team members." },
+  { period: "JULY 2025 — PRESENT", role: "Frontend Developer", company: "Brainwave Science", text: "Building responsive frontend interfaces with React, TypeScript and modern JavaScript, collaborating on user-focused web experiences and reusable UI components." },
+  { period: "2021 — JUNE 2025", role: "Senior WordPress Developer", company: "Volans Infomatics Pvt. Ltd., Noida", text: "Developed responsive web experiences with HTML, CSS and JavaScript, implemented interfaces in WordPress, supported the design team, communicated with clients, and managed team members." },
   { period: "2019 — 2021", role: "WordPress Developer", company: "Bharat Arpanet", text: "Developed responsive custom WordPress and WooCommerce websites, extended plugins, performed website audits and SEO work, and provided ongoing maintenance and support." },
   { period: "FEB — MAY 2019", role: "UI/UX Designer", company: "Grabox", text: "Worked on an in-house product, e-commerce website, and website/mobile application mockups." },
   { period: "2017 — 2019", role: "UI/UX Designer", company: "Freebird Info Solution", text: "Designed website layouts, converted designs into HTML, created banners, and implemented HTML in WordPress." },
   { period: "2016 — 2017", role: "Website Designer", company: "Wizi Logic Pvt Ltd", text: "Designed website layouts, converted designs to HTML, and created animated banners and print creatives." },
 ];
 
+const reactProjects = [
+  { name: "BL-FE iCognative", url: "https://bl-fe.icognative.info/", type: "Brainwave Science / React" },
+  { name: "Basil Health", url: "https://basilhealth.ai/", type: "Brainwave Science / React" },
+  { name: "Basil Health Jobs", url: "https://jobs.basilhealth.com/", type: "Brainwave Science / React" },
+  { name: "MyID iCognative", url: "https://myid-fe.icognative.info/", type: "Brainwave Science / React" },
+];
+
 const projects = [
-  { name: "EW Nutrition", url: "https://ew-nutrition.com/", type: "WordPress Development" },
-  { name: "EW Biotech", url: "https://ew-biotech.com/", type: "WordPress Development" },
-  { name: "IGY Research", url: "https://igy-research.com/", type: "WordPress Development" },
-  { name: "Volans Infomatics", url: "https://volansinfo.com/", type: "WordPress Development" },
-  { name: "The Mini Tins", url: "https://theminitins.com/", type: "WordPress / WooCommerce" },
-  { name: "Shivalik Journal", url: "https://www.shivalikjournal.com/", type: "WordPress Development" },
+  { name: "Brainwave Science", url: "https://brainwavescience.com/", type: "Brainwave Science / WordPress" },
+  { name: "EW Nutrition", url: "https://ew-nutrition.com/", type: "Volans Infomatics / WordPress" },
+  { name: "EW Biotech", url: "https://ew-biotech.com/", type: "Volans Infomatics / WordPress" },
+  { name: "IGY Research", url: "https://igy-research.com/", type: "Volans Infomatics / WordPress" },
+  { name: "Volans Infomatics", url: "https://volansinfo.com/", type: "Volans Infomatics / WordPress" },
+  { name: "Bharat Arpanet", url: "https://bharatarpanet.com/", type: "Bharat Arpanet / WordPress" },
+  { name: "The Mini Tins", url: "https://theminitins.com/", type: "Bharat Arpanet / WordPress / WooCommerce" },
+  { name: "Shivalik Journal", url: "https://www.shivalikjournal.com/", type: "Bharat Arpanet / WordPress" },
+  { name: "Global Stem Cell Care", url: "https://www.globalstemcellcare.com/", type: "Bharat Arpanet / WordPress" },
+  { name: "LRF Enterprises", url: "https://www.lrfenterprises.com/", type: "Bharat Arpanet / WordPress" },
+  { name: "LoanQubes", url: "https://loanqubes.com/", type: "Bharat Arpanet / WordPress" },
+  { name: "Shaddix Plastic Surgery", url: "https://www.shaddixplasticsurgery.com/", type: "Freebird Info Solution / UI/UX Design" },
+  { name: "Dr. Fichadia", url: "https://www.drfichadia.com/", type: "Freebird Info Solution / UI/UX Design" },
+  { name: "Rio Body Wax", url: "https://www.riobodywax.com/", type: "Freebird Info Solution / UI/UX Design" },
+  { name: "Skincare of Arizona", url: "https://skincareofarizona.com/", type: "Freebird Info Solution / UI/UX Design" },
+  { name: "Pacific Center Plastic Surgery", url: "https://www.pacificcenterplasticsurgery.com/", type: "Freebird Info Solution / UI/UX Design" },
+  { name: "Brandon Plastic Surgery", url: "https://www.brandonplasticsurgery.com/", type: "Freebird Info Solution / UI/UX Design" },
+  { name: "Genuine Likes", url: "https://genuinelikes.com/", type: "Wizi Logic Pvt Ltd / Website Design" },
 ];
 
 function App() {
@@ -40,7 +60,7 @@ function App() {
           <div className="eyebrow"><span></span> OPEN TO FULL-TIME OPPORTUNITIES</div>
           <h1>Hi, I'm <strong>Jayshree Bhunia.</strong></h1>
           <h2>Senior Frontend &<br/>WordPress Developer</h2>
-          <p>Web developer with 7+ years of professional experience, specializing in WordPress and modern frontend development with React, TypeScript and JavaScript.</p>
+          <p>Web developer with 10+ years of professional experience, specializing in WordPress and modern frontend development with React, TypeScript and JavaScript.</p>
           <div className="actions">
             <a className="primary" href="#projects">View my work <ArrowUpRight size={18}/></a>
             <a className="secondary" href="/Jayshree_CV.pdf" target="_blank"><Download size={18}/> Download resume</a>
@@ -101,9 +121,17 @@ function App() {
                 <div className="tags"><span>React</span><span>TypeScript</span><span>React Query</span><span>Jotai</span><span>Tailwind</span></div>
                 <small>Project details can be added here when public sharing is permitted.</small>
               </div>
-              {projects.map((p, i) => (
+              {reactProjects.map((p, i) => (
                 <a className="project-card" href={p.url} target="_blank" rel="noreferrer" key={p.name}>
                   <div className="project-num">{String(i + 2).padStart(2,"0")}</div>
+                  <div className="project-type">{p.type}</div>
+                  <h4>{p.name}</h4>
+                  <span className="view">View project <ArrowUpRight size={17}/></span>
+                </a>
+              ))}
+              {projects.map((p, i) => (
+                <a className="project-card" href={p.url} target="_blank" rel="noreferrer" key={p.name}>
+                  <div className="project-num">{String(i + reactProjects.length + 2).padStart(2,"0")}</div>
                   <div className="project-type">{p.type}</div>
                   <h4>{p.name}</h4>
                   <span className="view">View website <ArrowUpRight size={17}/></span>
